@@ -39,10 +39,11 @@ ul li{
      padding: 5px 20px;
      text-transform: uppercase;
      font-family: 'Roboto', sans-serif;
+     font-size: 10px;
      letter-spacing: 0.35em;
      transition: 0.3s;
      line-height: 20px;
-     margin: 20px 0;
+     margin: 20px 5px;
      display: block;
 }
 
@@ -51,6 +52,7 @@ ul li{
      color: #fff;
 }
 
+
 .sub-menu{
      position: absolute;
      background: #ffc72c;
@@ -58,19 +60,25 @@ ul li{
      padding: 20px 0;
      left: 50%;
      transform: translate(-85%,0);
+     display: none;
+}
+
+.main-menu >li:hover .sub-menu{
+     display: block;
 }
 
 .sub-menu >li{
-     padding: 3px 30px;
+     padding: 3px 20px;
      line-height: 20px;
-     
+     transition: 0.3s;
 }
 
 .sub-menu > li > a{
-     display: block;
      color: #fff;
      text-decoration: none;
      padding: 5px 0;
+     display: block;
+     transition: 0.3s;
 }
 
 .sub-menu > li:hover{
@@ -80,5 +88,78 @@ ul li{
 .sub-menu > li:hover a{
      color: #ffc72c;
      font-weight: bold;
+}
+
+.inner-sub-menu{
+     position: absolute;
+     left: calc(100% + 3px);
+     background: #ffc72c;
+     top: 0;
+     padding: 20px 0;
+     display: none;
+}
+
+.sub-menu > li:hover .inner-sub-menu{
+     display: block;
+     
+}
+
+.inner-sub-menu > li{
+     padding: 3px 30px;
+     line-height: 20px;
+     transition: 0.3s;
+}
+
+.inner-sub-menu > li > a{
+     color: #fff !important;
+     display: block;
+     padding: 5px 0;
+     text-decoration: none;
+     transition: 0.3s;
+}
+
+.inner-sub-menu > li:hover{
+     background: #fff;
+}
+
+.inner-sub-menu > li:hover a{
+     color: #ffc72c !important;
+     font-weight: bold;
+}
+
+@media screen and (max-width: 992px){
+     .logo{
+          padding: 10px 0;
+          background: #ffc72c;
+     }
+     .main-menu{
+          display: flex;
+          justify-content: flex-end;
+          margin: 0px 20px;
+     }
+}
+
+@media screen and (max-width: 768px){
+     .logo img{
+          display: block;
+          margin: 0 auto;
+     }
+
+     .main-menu{
+          display: block;
+          border: 2px solid #333;
+          margin: 0;
+          background: #fff;
+     }
+     .main-menu > li > a{
+          
+          color: #665;
+          padding: 5px 20px;
+          line-height: 20px;
+          padding: 5px 5px;
+          margin: 5px 5px;
+          font-size: 15px;
+     }
+     
 }
 
